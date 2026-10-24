@@ -1,0 +1,831 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>OmniSport CRM | Sistema Integral de Gestión Deportiva</title>
+
+    <!-- SEO & Metadatos -->
+    <meta
+      name="description"
+      content="Plataforma SaaS para la administración integral, médica y financiera de clubes e instituciones deportivas."
+    />
+    <meta
+      name="author"
+      content="Bazzani Luca, Elichiry Martina, Pacher Anabel, Rodríguez María Eva"
+    />
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&family=Outfit:wght@500;600;700;800&family=Space+Grotesk:wght@500;700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="style.css" />
+  </head>
+  <body>
+    <!-- Fondo técnico con grilla sutil -->
+    <div class="bg-pattern"></div>
+
+    <!-- Header Minimalista -->
+    <header class="header" id="header">
+      <div class="container nav-container">
+        <a href="#hero" class="brand">
+          <img
+            src="assets/images/logo.png"
+            alt="OmniSport CRM"
+            class="brand-logo"
+            onerror="
+              this.onerror = null;
+              this.parentElement.innerHTML =
+                '<span class=\'brand-fallback\'>⬡ OmniSport</span>';
+            "
+          />
+        </a>
+
+        <nav class="nav-menu" id="nav-menu">
+          <a href="#modulos" class="nav-link">Módulos</a>
+          <a href="#demo" class="nav-link">Demostración</a>
+          <a href="#stack" class="nav-link">Tecnologías</a>
+          <a href="#equipo" class="nav-link">Equipo</a>
+          <a href="#contacto" class="btn btn-outline nav-btn">Contacto</a>
+        </nav>
+
+        <button class="mobile-toggle" id="menu-btn" aria-label="Abrir menú">
+          <span></span><span></span><span></span>
+        </button>
+      </div>
+    </header>
+
+    <!-- 2. Hero Section estilo Mantine (2 Columnas con imagen y tarjetas flotantes) -->
+    <section class="hero-section" id="hero">
+      <div class="container">
+        <div class="hero-grid">
+          <!-- Columna Izquierda: Copy + Acciones + Features -->
+          <div class="hero-content">
+            <h1 class="hero-main-title">
+              La plataforma SaaS para la
+              <span class="gradient-text">gestión deportiva</span>
+            </h1>
+
+            <p class="hero-subtext">
+              Unificamos en una única plataforma la administración financiera,
+              los legajos médicos EMMAC y las canchas, tanto con conexión como
+              en modo
+              <em>offline</em>.
+            </p>
+
+            <div class="hero-cta-group">
+              <a href="#demo" class="btn btn-primary btn-lg">
+                <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                  <path d="M8 5v14l11-7z" />
+                </svg>
+                Ver Demostración
+              </a>
+              <a href="#modulos" class="btn btn-secondary btn-lg"
+                >Explorar Módulos</a
+              >
+            </div>
+          </div>
+
+          <!-- Columna Derecha: Preview del Sistema con Chips Flotantes -->
+          <div class="hero-visual">
+            <div class="system-preview-card">
+              <img
+                src="assets/images/poster-preview.jpg"
+                alt="Panel OmniSport CRM"
+                class="preview-img"
+                onerror="
+                  this.onerror = null;
+                  this.parentElement.classList.add('fallback-visual');
+                "
+              />
+              <div class="preview-overlay"></div>
+
+              <!-- Chips flotantes decorativos -->
+              <div class="floating-chip chip-top-left">
+                <span class="chip-status-dot"></span>
+                <span>EMMAC Vigente</span>
+              </div>
+
+              <div class="floating-chip chip-bottom-right">
+                <span class="chip-icon-inline">💳</span>
+                <span>Cobro de Cuotas</span>
+              </div>
+            </div>
+          </div>
+        </div>
+
+        <!-- Barra inferior de métricas numéricas -->
+        <div class="hero-metrics-bar">
+          <div class="metric-item">
+            <span class="metric-num" data-count="100">0</span>%
+            <span class="metric-desc">Trazabilidad de datos</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-num" data-count="5">0</span>
+            <span class="metric-desc">Módulos en tiempo real</span>
+          </div>
+          <div class="metric-divider"></div>
+          <div class="metric-item">
+            <span class="metric-num">SaaS</span>
+            <span class="metric-desc">Datos Seguros</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Diagnóstico / Problema vs Solución -->
+    <section class="problem-section" id="problema">
+      <div class="container">
+        <div class="section-tag center">Diagnóstico Situacional</div>
+        <h2 class="section-title center">
+          ¿Tu club sigue operando con planillas de papel?
+        </h2>
+        <p class="section-lead center">
+          En Córdoba, la mayoría de instituciones y academias afrontan una
+          severa fragmentación operativa que limita su crecimiento institucional
+          y deportivo.
+        </p>
+
+        <div class="dual-grid">
+          <div class="comparison-card card-danger">
+            <div class="card-header-icon danger">✕</div>
+            <h3 class="comparison-title">El Modelo Tradicional Fragmentado</h3>
+            <ul class="comparison-list">
+              <li>
+                <strong>Pérdida y duplicación:</strong> Padrón disperso entre
+                planillas Excel, formularios físicos y chats.
+              </li>
+              <li>
+                <strong>Cuentas corrientes desincronizadas:</strong> Errores en
+                cobros de cuotas sociales y descuentos familiares.
+              </li>
+              <li>
+                <strong>Riesgo en expedientes médicos:</strong> Pérdida de
+                vigencia del EMMAC y certificados de salud de atletas.
+              </li>
+              <li>
+                <strong>Desconexión Campo-Oficina:</strong> Entrenadores sin
+                acceso ágil a la lista de habilitados ni toma de asistencia en
+                canchas.
+              </li>
+            </ul>
+          </div>
+
+          <div class="comparison-card card-success" id="solucion">
+            <div class="card-header-icon success">✓</div>
+            <h3 class="comparison-title">La Solución: OmniSport CRM</h3>
+            <ul class="comparison-list">
+              <li>
+                <strong>Fuente Única de Verdad:</strong> Integración 360° de
+                deportistas, socios, familias y personal.
+              </li>
+              <li>
+                <strong>Motor Financiero con Libro Diario:</strong> Facturación
+                masiva en 1 clic y soporte para pagos mixtos.
+              </li>
+              <li>
+                <strong>Sincronización Offline First:</strong> Los entrenadores
+                registran asistencia en campo sin internet y se sincroniza al
+                reconectar.
+              </li>
+              <li>
+                <strong>Dashboard Ejecutivo con KPIs:</strong> Detección
+                temprana de morosidad, deserción y control de logística/mermas.
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 4. Video Showcase Section (Link oficial integrado) -->
+    <section class="video-section" id="demo">
+      <div class="container">
+        <div class="section-tag center">Muestra de Software</div>
+        <h2 class="section-title center">OmniSport CRM en Acción</h2>
+        <p class="section-lead center">
+          Recorrido por el flujo del sistema, el uso de espacios y el tablero de
+          control de roles. Además, la trazabilidad de pagos en tiempo real.
+        </p>
+
+        <div class="video-wrapper">
+          <div class="video-frame">
+            <iframe
+              id="omnisportVideo"
+              src="https://www.youtube-nocookie.com/embed/oXXzJx8GzV4?rel=0&modestbranding=1"
+              title="Demostración OmniSport CRM"
+              frameborder="0"
+              allow="
+                accelerometer;
+                autoplay;
+                clipboard-write;
+                encrypted-media;
+                gyroscope;
+                picture-in-picture;
+                web-share;
+              "
+              allowfullscreen
+            ></iframe>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 1. Módulos Normales y Estables (Tabs limpios sin scroll bloqueado) -->
+    <section class="modules-clean-section" id="modulos">
+      <div class="container">
+        <div class="section-tag center">Arquitectura Funcional</div>
+        <h2 class="section-title center">
+          5 Módulos Integrados. Cero Fricción.
+        </h2>
+        <p class="section-lead center">
+          Cada módulo está diseñado para un rol específico dentro del club, con
+          flujos de trabajo optimizados y sincronización en tiempo real.
+        </p>
+
+        <!-- Selector de pestañas accesible -->
+        <div class="modules-tab-bar" id="moduleTabBar">
+          <button type="button" class="mod-tab-btn active" data-mod="0">
+            01. Gestión 360
+          </button>
+          <button type="button" class="mod-tab-btn" data-mod="1">
+            02. Gestión de Cobros
+          </button>
+          <button type="button" class="mod-tab-btn" data-mod="2">
+            03. Gestión de Campo
+          </button>
+          <button type="button" class="mod-tab-btn" data-mod="3">
+            04. Control de Logística
+          </button>
+          <button type="button" class="mod-tab-btn" data-mod="4">
+            05. Gestión de Acceso
+          </button>
+        </div>
+
+        <!-- Contenedor de paneles -->
+        <div class="modules-panels-container">
+          <!-- PANEL 1: Gestión 360 -->
+          <div class="mod-panel active" id="panel-0">
+            <div class="mod-panel-grid">
+              <div class="mod-info-box">
+                <span class="mod-badge-num">MÓDULO 01</span>
+                <h3>Gestión 360</h3>
+                <p>
+                  Padrón unificado de socios, deportistas, empleados y vínculos
+                  familiares.
+                </p>
+                <div class="mod-tags-row">
+                  <span>Tarjetas dinámicas</span>
+                  <span>Legajos médicos</span>
+                </div>
+              </div>
+
+              <div class="mod-preview-box">
+                <div class="mock-inner-card">
+                  <div class="mock-user-header">
+                    <div class="mock-avatar-circle">LH</div>
+                    <div>
+                      <strong>Lola Hernández</strong>
+                      <small>DNI 56.888.111 • Fútbol Femenino</small>
+                    </div>
+                    <span class="pill-badge pill-success">EMMAC Vigente</span>
+                  </div>
+                  <div class="mock-tabs-nav">
+                    <span class="mock-tab-link active">Identidad</span>
+                    <span class="mock-tab-link">Legajo & Salud</span>
+                    <span class="mock-tab-link">Finanzas</span>
+                    <span class="mock-tab-link">Familia</span>
+                  </div>
+                  <div class="mock-row-item">
+                    <span>Certificado Médico Oficial:</span>
+                    <strong class="text-blue">Aprobado / Al día</strong>
+                  </div>
+                  <div class="mock-row-item">
+                    <span>Responsable Financiero:</span>
+                    <span>Baracus, Marito (Padre)</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANEL 2: Finanzas -->
+          <div class="mod-panel" id="panel-1">
+            <div class="mod-panel-grid">
+              <div class="mod-info-box">
+                <span class="mod-badge-num">MÓDULO 02</span>
+                <h3>Gestión de Cobros</h3>
+                <p>
+                  Carga masiva de cuotas en un clic y cobros con medios de pago
+                  mixtos.
+                </p>
+                <div class="mod-tags-row">
+                  <span>Cuentas corrientes</span>
+                  <span>Facturación masiva</span>
+                </div>
+              </div>
+
+              <div class="mod-preview-box">
+                <div class="mock-inner-card">
+                  <div class="mock-finance-header">
+                    <span>Cuota Fútbol 11 (Mensual)</span>
+                    <span class="amount-title">$ 35.000,00</span>
+                  </div>
+                  <div class="mock-row-item">
+                    <span>Método de cobro:</span>
+                    <span class="pill-badge pill-gray"
+                      >Transferencia Bancaria</span
+                    >
+                  </div>
+                  <div class="mock-receipt-panel">
+                    <span class="receipt-icon">🧾</span>
+                    <div>
+                      <strong>Comprobante emitido #00010822</strong>
+                      <small>Asentado automáticamente en Libro Diario</small>
+                    </div>
+                    <span class="pill-badge pill-success">Cobrado</span>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANEL 3: Campo -->
+          <div class="mod-panel" id="panel-2">
+            <div class="mod-panel-grid">
+              <div class="mod-info-box">
+                <span class="mod-badge-num">MÓDULO 03</span>
+                <h3>Gestión de Campo</h3>
+                <p>
+                  App optimizada para tomar asistencia y gestionar el uso de
+                  espacios.
+                </p>
+                <div class="mod-tags-row">
+                  <span>Listas por categoría</span>
+                  <span>Habilitación médica</span>
+                </div>
+              </div>
+
+              <div class="mod-preview-box">
+                <div class="mock-inner-card">
+                  <div class="mock-courts-grid">
+                    <div class="court-card">
+                      <strong>Cancha Fútbol 5</strong>
+                      <span class="court-tag busy">18:00 - Cat. Infantil</span>
+                    </div>
+                    <div class="court-card">
+                      <strong>Cancha Básquet</strong>
+                      <span class="court-tag free">Libre / Disponible</span>
+                    </div>
+                  </div>
+                  <small class="text-muted-mono"
+                    >✓ 18 presentes guardados en local (auto-sincronizar al
+                    conectar)</small
+                  >
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANEL 4: Control Ejecutivo -->
+          <div class="mod-panel" id="panel-3">
+            <div class="mod-panel-grid">
+              <div class="mod-info-box">
+                <span class="mod-badge-num">MÓDULO 04</span>
+                <h3>Control de Logística</h3>
+                <p>
+                  Panel con indicadores de morosidad acumulada y alertas de
+                  deserción.
+                </p>
+                <div class="mod-tags-row">
+                  <span>KPIs en vivo</span>
+                  <span>Prevención de bajas</span>
+                </div>
+              </div>
+
+              <div class="mod-preview-box">
+                <div class="mock-inner-card">
+                  <div class="mock-kpis-deck">
+                    <div class="kpi-mini-card">
+                      <small>Ingresos Mes</small>
+                      <strong>$ 191.150</strong>
+                    </div>
+                    <div class="kpi-mini-card">
+                      <small>Tasa Cobranza</small>
+                      <strong class="text-blue">67.95%</strong>
+                    </div>
+                    <div class="kpi-mini-card">
+                      <small>Alertas Deserción</small>
+                      <strong class="text-red">2 Socios</strong>
+                    </div>
+                  </div>
+                  <div class="mock-row-item">
+                    <span>Exportación oficial:</span>
+                    <span class="pill-badge pill-gray"
+                      >📊 Reporte_Mensual.xlsx</span
+                    >
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <!-- PANEL 5: Seguridad -->
+          <div class="mod-panel" id="panel-4">
+            <div class="mod-panel-grid">
+              <div class="mod-info-box">
+                <span class="mod-badge-num">MÓDULO 05</span>
+                <h3>Gestión de Acceso</h3>
+                <p>
+                  Roles con permisos específicos para directivos,
+                  administrativos y entrenadores.
+                </p>
+                <div class="mod-tags-row">
+                  <span>Multi-institución</span>
+                  <span>Auditoría de eventos</span>
+                </div>
+              </div>
+
+              <div class="mod-preview-box">
+                <div class="mock-inner-card">
+                  <div class="mock-rule-box">
+                    <strong>Regla Familiar Activa</strong>
+                    <p>4 Hermanos inscriptos ➔ 40% descuento automático</p>
+                  </div>
+                  <div class="mock-matrix-rows">
+                    <div class="matrix-item">
+                      <span>Secretaría:</span>
+                      <strong class="text-blue">Padrón + EMMAC</strong>
+                    </div>
+                    <div class="matrix-item">
+                      <span>Tesorería:</span>
+                      <strong class="text-blue">Libro Diario + Cobros</strong>
+                    </div>
+                    <div class="matrix-item">
+                      <span>Entrenador:</span>
+                      <span>Solo Asistencia Cancha</span>
+                    </div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Stack Tecnológico: Tira continua que NUNCA se detiene y respeta el tamaño SVG -->
+    <section class="stack-section" id="stack">
+      <div class="container">
+        <div class="section-tag center">Ingeniería del Sistema</div>
+        <h2 class="section-title center">
+          Stack Tecnológico Robusto e Industrial
+        </h2>
+        <p class="section-lead center">
+          Construido con herramientas modernas, escalables y de alto
+          rendimiento.
+        </p>
+      </div>
+
+      <div class="tech-marquee-wrapper">
+        <div class="tech-marquee-track">
+          <!-- Iconos reales sin marcos redondos que los corten -->
+          <div class="tech-item">
+            <img src="assets/images/tech/java.svg" alt="Java" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/images/tech/spring.svg" alt="Spring Boot" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/images/tech/react.svg" alt="React" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/images/tech/typescript.svg" alt="TypeScript" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/images/tech/vite.svg" alt="Vite" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/images/tech/tailwind.svg" alt="Tailwind" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/images/tech/postgresql.svg" alt="PostgreSQL" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/images/tech/mongodb.svg" alt="MongoDB" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/images/tech/docker.svg" alt="Docker" />
+          </div>
+          <div class="tech-item">
+            <img src="assets/images/tech/github.svg" alt="GitHub Actions" />
+          </div>
+
+          <!-- Duplicado idéntico para loop continuo sin saltos -->
+          <div class="tech-item" aria-hidden="true">
+            <img src="assets/images/tech/java.svg" alt="Java" />
+          </div>
+          <div class="tech-item" aria-hidden="true">
+            <img src="assets/images/tech/spring.svg" alt="Spring Boot" />
+          </div>
+          <div class="tech-item" aria-hidden="true">
+            <img src="assets/images/tech/react.svg" alt="React" />
+          </div>
+          <div class="tech-item" aria-hidden="true">
+            <img src="assets/images/tech/typescript.svg" alt="TypeScript" />
+          </div>
+          <div class="tech-item" aria-hidden="true">
+            <img src="assets/images/tech/vite.svg" alt="Vite" />
+          </div>
+          <div class="tech-item" aria-hidden="true">
+            <img src="assets/images/tech/tailwind.svg" alt="Tailwind" />
+          </div>
+          <div class="tech-item" aria-hidden="true">
+            <img src="assets/images/tech/postgresql.svg" alt="PostgreSQL" />
+          </div>
+          <div class="tech-item" aria-hidden="true">
+            <img src="assets/images/tech/mongodb.svg" alt="MongoDB" />
+          </div>
+          <div class="tech-item" aria-hidden="true">
+            <img src="assets/images/tech/docker.svg" alt="Docker" />
+          </div>
+          <div class="tech-item" aria-hidden="true">
+            <img src="assets/images/tech/github.svg" alt="GitHub Actions" />
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- Equipo de Desarrollo -->
+    <section class="team-section" id="equipo">
+      <div class="container">
+        <div class="section-tag center">Proyecto Final de Graduación</div>
+        <h2 class="section-title center">Equipo de Desarrollo</h2>
+        <p class="section-lead center">
+          <strong>Tec. Sup. en Desarrollo de Software</strong><br />
+          Universidad Provincial de Córdoba • Sede Regional Villa Carlos Paz
+          Arturo Illia
+        </p>
+
+        <div class="team-grid">
+          <!-- Luca Bazzani -->
+          <div class="team-card">
+            <div class="team-avatar-container">
+              <img
+                src="assets/images/team/luca-bazzani.jpg"
+                alt="Luca Bazzani"
+                class="team-photo"
+                onerror="
+                  this.onerror = null;
+                  this.parentElement.innerHTML =
+                    '<div class=\'team-fallback\'>LB</div>';
+                "
+              />
+            </div>
+            <h4 class="team-name">Bazzani Luca</h4>
+            <span class="team-role">Scrum Master / Backend Developer</span>
+            <span class="team-email">luccasbazza@gmail.com</span>
+          </div>
+
+          <!-- Martina Elichiry -->
+          <div class="team-card">
+            <div class="team-avatar-container">
+              <img
+                src="assets/images/team/martina-elichiry.jpg"
+                alt="Martina Elichiry"
+                class="team-photo"
+                onerror="
+                  this.onerror = null;
+                  this.parentElement.innerHTML =
+                    '<div class=\'team-fallback\'>ME</div>';
+                "
+              />
+            </div>
+            <h4 class="team-name">Elichiry Martina</h4>
+            <span class="team-role">Frontend & UI/UX Developer</span>
+            <span class="team-email">elichirymartina@gmail.com</span>
+          </div>
+
+          <!-- Anabel Pacher -->
+          <div class="team-card">
+            <div class="team-avatar-container">
+              <img
+                src="assets/images/team/anabel-pacher.jpg"
+                alt="Anabel Pacher"
+                class="team-photo"
+                onerror="
+                  this.onerror = null;
+                  this.parentElement.innerHTML =
+                    '<div class=\'team-fallback\'>AP</div>';
+                "
+              />
+            </div>
+            <h4 class="team-name">Pacher Anabel</h4>
+            <span class="team-role">Fullstack Developer & QA</span>
+            <span class="team-email">anabelpacher@gmail.com</span>
+          </div>
+
+          <!-- María Eva Rodríguez -->
+          <div class="team-card">
+            <div class="team-avatar-container">
+              <img
+                src="assets/images/team/eva-rodriguez.jpg"
+                alt="María Eva Rodríguez"
+                class="team-photo"
+                onerror="
+                  this.onerror = null;
+                  this.parentElement.innerHTML =
+                    '<div class=\'team-fallback\'>ER</div>';
+                "
+              />
+            </div>
+            <h4 class="team-name">Rodríguez María Eva</h4>
+            <span class="team-role">Product Owner (Club Italiano) / Dev</span>
+            <span class="team-email">maevarodriguez1@gmail.com</span>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- 3. Formulario Simplificado Centrado (Nombre, Teléfono, Email + Checkbox Obligatorio) -->
+    <section class="cta-section" id="contacto">
+      <div class="container">
+        <div class="cta-box">
+          <div class="cta-header-center">
+            <span class="section-tag center">Paso a la Acción</span>
+            <h2 class="cta-title center">
+              Digitalizá la gestión deportiva de tu institución
+            </h2>
+            <p class="cta-text center">
+              Dejanos tus datos de contacto para enviarte información o
+              coordinar una prueba de OmniSport CRM.
+            </p>
+          </div>
+
+          <form
+            class="lead-form"
+            id="leadForm"
+            action="https://formsubmit.co/luccasbazza@gmail.com"
+            method="POST"
+          >
+            <input
+              type="hidden"
+              name="_subject"
+              value="Nuevo registro OmniSport CRM (Muestra UPC)"
+            />
+            <input type="hidden" name="_captcha" value="false" />
+            <input type="hidden" name="_template" value="table" />
+
+            <div class="form-fields-stack">
+              <div class="form-group">
+                <label for="leadName">Nombre y Apellido *</label>
+                <input
+                  type="text"
+                  id="leadName"
+                  name="nombre"
+                  placeholder="Ej: Juan Pérez"
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="leadPhone">Teléfono / WhatsApp *</label>
+                <input
+                  type="tel"
+                  id="leadPhone"
+                  name="telefono"
+                  placeholder="+54 9 3541..."
+                  required
+                />
+              </div>
+
+              <div class="form-group">
+                <label for="leadEmail">Correo Electrónico *</label>
+                <input
+                  type="email"
+                  id="leadEmail"
+                  name="email"
+                  placeholder="ejemplo@club.com"
+                  required
+                />
+              </div>
+            </div>
+
+            <!-- Checkbox alineado y obligatorio -->
+            <div class="form-terms-row">
+              <input
+                type="checkbox"
+                id="termsCheck"
+                name="terminos_aceptados"
+                required
+              />
+              <label for="termsCheck">
+                He leído y acepto los
+                <button type="button" class="btn-link-legal" id="openLegalBtn">
+                  Términos y Condiciones
+                </button>
+                del proyecto.
+              </label>
+            </div>
+
+            <button
+              type="submit"
+              class="btn btn-primary btn-submit"
+              id="submitBtn"
+            >
+              <span>Guardar Datos</span>
+              <svg class="btn-icon" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M2.01 21L23 12 2.01 3 2 10l15 2-15 2z" />
+              </svg>
+            </button>
+
+            <div
+              class="form-alert success"
+              id="formSuccessAlert"
+              style="display: none"
+            >
+              ✓ ¡Información guardada exitosamente! Nos comunicaremos a la
+              brevedad.
+            </div>
+          </form>
+        </div>
+      </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="footer">
+      <div class="container footer-container">
+        <div class="footer-left">
+          <strong>OmniSport CRM</strong> — Gestión Integral para Clubes
+          Deportivos
+        </div>
+        <div class="footer-right">
+          <button type="button" class="footer-legal-link" id="footerLegalBtn">
+            Términos & Privacidad
+          </button>
+          <a href="#hero" class="btn-top">Volver Arriba ↑</a>
+        </div>
+      </div>
+    </footer>
+
+    <!-- MODAL DE TÉRMINOS Y CONDICIONES / AVISO LEGAL -->
+    <div
+      class="legal-modal-backdrop"
+      id="legalModalBackdrop"
+      style="display: none"
+    >
+      <div class="legal-modal-card">
+        <div class="legal-modal-header">
+          <h3>Términos y Condiciones</h3>
+          <button
+            type="button"
+            class="legal-modal-close"
+            id="closeLegalBtn"
+            aria-label="Cerrar"
+          >
+            &times;
+          </button>
+        </div>
+        <div class="legal-modal-body">
+          <h4>1. Marco Académico e Institucional</h4>
+          <p>
+            OmniSport CRM es un proyecto desarrollado como Trabajo Final de
+            Graduación para la
+            <strong>Tecnicatura Superior en Desarrollo de Software</strong> de
+            la <strong>Universidad Provincial de Córdoba (UPC)</strong>, Sede
+            Regional Villa Carlos Paz Arturo Illia.
+          </p>
+
+          <h4>2. Protección de Datos Personales (Ley 25.326)</h4>
+          <p>
+            En cumplimiento con la legislación de la República Argentina, los
+            datos recolectados (nombre, teléfono y correo electrónico) son
+            estrictamente confidenciales y se utilizarán únicamente con fines de
+            contacto, demostración del sistema e intercambio académico. Ningún
+            dato será comercializado ni cedido a terceros.
+          </p>
+
+          <h4>3. Propiedad Intelectual y Soberanía Institucional</h4>
+          <p>
+            La plataforma SaaS multi-institución garantiza la soberanía e
+            independencia de los clubes registrados, resguardando la
+            trazabilidad de sus padrones y expedientes médicos oficiales
+            (EMMAC).
+          </p>
+        </div>
+        <div class="legal-modal-footer">
+          <button type="button" class="btn btn-secondary" id="confirmLegalBtn">
+            Entendido
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
