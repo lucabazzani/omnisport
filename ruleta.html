@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="es">
+  <head>
+    <meta charset="UTF-8" />
+    <meta
+      name="viewport"
+      content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no"
+    />
+    <title>Ruleta OmniSport | Ganá tu Sticker</title>
+
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700&family=Outfit:wght@600;700;800&family=Space+Grotesk:wght@700&display=swap"
+      rel="stylesheet"
+    />
+
+    <link rel="stylesheet" href="ruleta.css" />
+  </head>
+  <body>
+    <!-- Canvas de Confeti -->
+    <canvas id="confettiCanvas"></canvas>
+
+    <main class="roulette-app">
+      <!-- Encabezado -->
+      <header class="app-header">
+        <div class="logo-wrapper" id="adminResetTrigger" title="OmniSport">
+          <img
+            src="assets/images/logo.png"
+            alt="OmniSport"
+            onerror="
+              this.onerror = null;
+              this.parentElement.innerHTML =
+                '<span class=\'fallback-logo\'>⬡ OmniSport</span>';
+            "
+          />
+        </div>
+        <span class="badge-edition">Muestra UPC 2026</span>
+        <h1 class="main-title">Girá y llevate tu Sticker</h1>
+        <p class="subtitle">Probá tu suerte en la ruleta de OmniSport CRM.</p>
+      </header>
+
+      <!-- VISTA 1: La Ruleta de Juego -->
+      <section class="game-section" id="gameView">
+        <div class="wheel-stage">
+          <!-- Flecha indicadora superior -->
+          <div class="wheel-pointer" id="wheelPointer"></div>
+
+          <!-- Rueda Canvas -->
+          <div class="canvas-container">
+            <canvas id="wheelCanvas" width="340" height="340"></canvas>
+            <div class="center-cap" id="spinCenterBtn">
+              <span>GIRAR</span>
+            </div>
+          </div>
+        </div>
+
+        <button type="button" class="btn-spin-action" id="spinBtn">
+          <span>¡GIRAR RULETA!</span>
+        </button>
+
+        <p class="spin-rules-hint">
+          1 intento por persona • Reclamá tu premio en el stand
+        </p>
+      </section>
+
+      <!-- VISTA 2: Ticket de Canje (Aparece al ganar o si recarga la página) -->
+      <section class="ticket-section" id="ticketView" style="display: none">
+        <div class="voucher-card">
+          <div class="voucher-ribbon">¡Premio Obtenido!</div>
+          <div class="voucher-icon" id="voucherIcon">🎁</div>
+          <h2 class="voucher-prize-name" id="voucherPrize">
+            Sticker OmniSport
+          </h2>
+          <p class="voucher-instructions">
+            Mostrá esta pantalla al equipo de
+            <strong>OmniSport CRM</strong> para retirar tu sticker.
+          </p>
+
+          <div class="voucher-code-box">
+            <small>CÓDIGO DE VALIDACIÓN</small>
+            <strong id="voucherCode">#OMNI-0000</strong>
+            <span class="voucher-time" id="voucherTime">--:-- hs</span>
+          </div>
+
+          <div class="voucher-seal">✓ Estado: Válido para Canje</div>
+        </div>
+      </section>
+    </main>
+
+    <script src="ruleta.js"></script>
+  </body>
+</html>
